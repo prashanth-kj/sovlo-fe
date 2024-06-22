@@ -5,16 +5,18 @@ import AxiosService from '../common/Apiservice';
 import { useNavigate } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import {toast} from 'react-toastify';
+import Spinner from 'react-bootstrap/Spinner';
 
 
 function Create() {
     const [createSovlo, setCreateSovlo] = useState(null);
+    let [loading,setLoading]=useState(false);
       
      let navigate= useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+              setLoading(true);
         const formData = new FormData();
         formData.append('image', createSovlo);
 
@@ -31,6 +33,8 @@ function Create() {
         } catch (error) {
             console.error('Error uploading image:', error);
             toast.error(error.response.data.message || "Error Occured")
+        }finally{
+             setLoading(false)
         }
     };
 
@@ -49,7 +53,14 @@ function Create() {
                         />
                     </Form.Group>
                     <Button variant="secondary" type="submit" className="mt-4">
-                        Create
+                      {loading ? (
+                            <>
+                            <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" />
+                            <span className="visually-hidden">Loading...</span>
+                            </>
+                        ) : (
+                            'Add'
+                        )}
                     </Button>
                 </Form>
              </div>
