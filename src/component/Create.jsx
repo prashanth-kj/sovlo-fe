@@ -52,7 +52,7 @@ function Create() {
                             onChange={(e) => setCreateSovlo(e.target.files[0])}
                         />
                     </Form.Group>
-                    <Button variant="secondary" type="submit" className="mt-4">
+                    <Button variant="secondary" type="submit" className="mt-4 w-100">
                       {loading ? (
                             <>
                             <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" />
