@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Dashboard from "./component/dashboard"
+import Dashboard from './component/Dashboard'
 import Create from "./component/create"
 import Header from "./component/Header"
 
