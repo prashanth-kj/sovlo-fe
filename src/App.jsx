@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Dashboard from './component/Dashboard'
+import Create from './component/Create'
 import Header from './component/Header'
-import Create from "./component/create"
+
 
 function App() {
  
