@@ -23,7 +23,7 @@ function Create() {
         try {
             let res = await AxiosService.post('/sovlo/upload', formData, {
                 headers: {
-                    'Content-Type': 'multipart/form-data',
+                    'Content-Type': 'multipart/form-data'
                 },
             });
             if(res.status==201){
