@@ -30,6 +30,7 @@ function Create() {
                 toast.success(res.data.message)
                 navigate('/dashboard')
             }
+            
         } catch (error) {
             console.error('Error uploading image:', error);
             toast.error(error.response.data.message || "Error Occured")
