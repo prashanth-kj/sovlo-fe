@@ -19,7 +19,7 @@ function Create() {
               setLoading(true);
         const formData = new FormData();
         formData.append('image', createSovlo);
-
+console.log(formData);
         try {
             let res = await AxiosService.post('/sovlo/upload', formData, {
                 headers: {
