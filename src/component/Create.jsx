@@ -33,9 +33,9 @@ console.log(formData);
             }
 
         } catch (error) {
-            console.log(error)
+            console.log('Error response:', error.response);
             console.error('Error uploading image:', error);
-            toast.error(error.response.data.message || "Error Occured")
+            toast.error(error.response?.data?.message || "Error Occurred");
         }finally{
              setLoading(false)
         }
