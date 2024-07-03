@@ -26,6 +26,7 @@ function Create() {
                     'Content-Type': 'multipart/form-data'
                 },
             });
+            console.log(res);
             if(res.status==201){
                 toast.success(res.data.message)
                 navigate('/dashboard')
